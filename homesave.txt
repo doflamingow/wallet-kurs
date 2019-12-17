@@ -1,0 +1,22 @@
+       <Text style={styles.welcome}>Welcome to React Native!</Text>
+              <Text style={styles}>To get started, edit App.js</Text>
+              <Text style={styles}></Text>
+              <Text>
+              {this.state.testData}
+              </Text>
+              <TextInput
+              style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+              onChangeText={(testData) => this.setState({testData})}
+              value={this.state.testData}
+            >
+            </TextInput>
+
+            <Button
+            onPress={() => this.props.navigation.navigate('Other')}
+            title="Pencet"
+          >
+            Press Me
+          </Button>
+
+          <CallComp changeText={this.editText} data={this.state.testData}/>
+           
